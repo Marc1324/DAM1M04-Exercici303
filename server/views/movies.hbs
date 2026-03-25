@@ -1,26 +1,26 @@
 {{> header}}
 {{> menu}}
-<h1>Catàleg de Pel·lícules</h1>
 
-<div class="movies-grid">
-  {{#each movies}}
-    <div class="movie-card">
-      <h2>{{this.title}}</h2>
-      
-      <div class="movie-info">
-        <span>📅 {{this.release_year}}</span> | 
-        <span>⭐ {{this.rating}}</span>
-      </div>
+<main>
+    <h1>{{titolPagina}}</h1>
+    <a href="/movieAdd" class="btn-primary" style="margin-bottom: 20px; display:inline-block;">+ Afegir Pel·lícula</a>
 
-      <p class="movie-description">{{this.description}}</p>
-      
-      <div class="actors-list">
-        <strong>Actors principals:</strong>
-        <span class="actors-names">{{this.actors}}</span>
-      </div>
+    <div class="table-container">
+        <table>
+            <tbody>
+                {{#each movies}}
+                <tr>
+                    <td><strong>{{title}}</strong><br>{{description}}</td>
+                    <td>{{release_year}} {{rating}}</td>
+                    <td>{{actors}}</td>
+                    <td>
+                        <a href="/movie/{{film_id}}" class="btn-info">Veure detalls</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
-  {{/each}}
-</div>
-
+</main>
 
 {{> footer}}
