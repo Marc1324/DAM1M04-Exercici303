@@ -1,0 +1,23 @@
+{{> header}}
+{{> menu}}
+
+<h1>Llista de Clients (Sakila)</h1>
+
+<div class="grid-container">
+    {{#each customers}}
+    <div class="card">
+        <h2>{{first_name}} {{last_name}}</h2>
+        
+        <div class="rentals-section">
+            <strong>Últims 5 lloguers:</strong>
+            <ul class="rentals-list">
+                {{#each rentals}}
+                <li>Data: {{rental_date}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{> footer}}

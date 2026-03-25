@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Configuració general */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 { 
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Contenidor de la graella (Grid) - Serveix per a Pel·lícules i Clients */
+.movies-grid, .clients-grid, .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1400px; /* Una mica més ample per a tantes targetes */
+    margin: 0 auto;
+}
+
+/* Targetes (Cards) - Estil base compartit */
+.movie-card, .client-card, .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    border-top: 5px solid #007bff; /* Blau Sakila */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover, .client-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Títols de les targetes */
+.movie-card h2, .client-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    text-transform: uppercase; /* Perquè els noms ressaltin */
+}
+
+/* Secció específica per a la llista d'alloguers (Clients) */
+.rentals-section {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.rentals-section strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.rentals-list {
+    list-style: none; /* Treiem els punts per defecte */
+    padding: 0;
+    margin: 0;
+}
+
+.rentals-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+.rentals-list li:last-child {
+    border-bottom: none;
+}
+
+/* Estils de les pel·lícules (Es mantenen els teus originals) */
+.movie-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.actors-list {
+    margin-top: auto;
+    background: #f1f8ff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Footer */
+footer { 
+    text-align: center;
+    margin-top: 50px; 
+    padding: 20px;
+    font-size: 0.85em; 
+    color: #95a5a6; 
+    border-top: 1px solid #ddd;
+}

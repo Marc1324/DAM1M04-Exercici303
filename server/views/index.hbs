@@ -1,0 +1,8 @@
+{{> header}}
+{{> menu}}
+<h1>Benvingut a {{siteName}}</h1>
+<h2>Pel·lícules destacades</h2>
+{{#each movies}}
+    <p><strong>{{title}}</strong> ({{release_year}})</p>
+{{/each}}
+{{> footer}}

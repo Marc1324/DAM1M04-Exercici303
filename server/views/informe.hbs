@@ -1,0 +1,9 @@
+{{> header}}
+{{> menu}}
+<h1>Informe de Pel·lícules i Actors</h1>
+<ul>
+{{#each movies}}
+    <li><strong>{{title}}</strong>: {{actors}}</li>
+{{/each}}
+</ul>
+{{> footer}}
