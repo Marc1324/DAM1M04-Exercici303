@@ -1,0 +1,14 @@
+{{> header}}
+{{> menu}}
+<main>
+    <h1>{{movie.title}}</h1>
+    <div class="card">
+        <p><strong>Descripció:</strong> {{movie.description}}</p>
+        <p><strong>Any:</strong> {{movie.release_year}}</p>
+        <p><strong>Puntuació:</strong> {{movie.rating}}</p>
+        <br>
+        <a href="/movieEdit/{{movie.film_id}}" class="btn-primary">Editar Pel·lícula</a>
+        <a href="/movies" class="btn-info">Tornar al llistat</a>
+    </div>
+</main>
+{{> footer}}

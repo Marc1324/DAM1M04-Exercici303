@@ -1,0 +1,28 @@
+{{> header}}
+{{> menu}}
+<main>
+    <h1>{{titolPagina}}</h1>
+    <div class="card">
+        <form action="/afegirPeli" method="POST">
+            <label>Títol:</label><br>
+            <input type="text" name="title" required style="width:100%; margin-bottom:10px;"><br>
+
+            <label>Descripció:</label><br>
+            <textarea name="description" rows="4" style="width:100%; margin-bottom:10px;"></textarea><br>
+
+            <label>Any de llançament:</label><br>
+            <input type="number" name="release_year" required style="width:100%; margin-bottom:10px;"><br>
+
+            <label>Idioma:</label><br>
+            <select name="language_id" style="width:100%; margin-bottom:20px;">
+                {{#each languages}}
+                    <option value="{{language_id}}">{{name}}</option>
+                {{/each}}
+            </select><br>
+
+            <button type="submit" class="btn-primary">Guardar Pel·lícula</button>
+            <a href="/movies" class="btn-info">Cancel·lar</a>
+        </form>
+    </div>
+</main>
+{{> footer}}
